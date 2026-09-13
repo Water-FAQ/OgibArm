@@ -6,7 +6,7 @@
   "release_url": "https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.0-build.9",
   "file_name": "OgibArm.zip",
   "sha256": "00777b4a888e3d6157de4d89ff52eb3f52a22efa650e6c26d0225d6976e247fb",
-  "size": 67546171,
+  "size": 67078472,
   "published_at": "2026-09-13",
   "notes": [
     "Формирование огибающих армирования по DXF из ЛИРА-САПР.",
