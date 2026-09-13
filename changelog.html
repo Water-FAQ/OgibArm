@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="История версий OgibArm.">
+  <meta name="theme-color" content="#f2f5f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#181b20" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2">
+  <title>История версий — OgibArm</title>
+</head>
+<body>
+  <header class="site-header"><div class="wrap header-row"><a class="brand" href="index.html" aria-label="OgibArm — главная"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/logo-dark.png"><img src="assets/images/logo-light.png" alt="OgibArm" width="1876" height="421"></picture></a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><svg class="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button><nav id="site-navigation" class="nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="index.html#features">Возможности</a><a href="index.html#start">Начало работы</a><a href="faq.html">FAQ</a><a href="changelog.html" aria-current="page">Версии</a><a href="terms.html">Условия</a></nav></div></header>
+  <main class="wrap content">
+    <div class="page-head"><h1>История версий</h1><p>Основные возможности опубликованных версий OgibArm.</p></div>
+    <div class="version-layout">
+      <aside class="version-sidebar" aria-label="Версии OgibArm"><nav class="version-toc" data-scroll-nav><a href="#version-1-0-0" class="is-active">v1.0.0</a></nav></aside>
+      <div class="release-list">
+        <article class="release" id="version-1-0-0" data-scroll-section>
+          <div class="release-head"><h2>OgibArm v1.0.0</h2><time datetime="2026-09-13">13 сентября 2026</time></div>
+          <p>Первый публичный выпуск.</p>
+          <ul>
+            <li>объединение результатов подбора армирования из нескольких DXF в отдельные огибающие NX, NY, VX и VY;</li>
+            <li>поддержка типов DXF R12 из ЛИРА-САПР 2021 и R2007 из ЛИРА-САПР 2024;</li>
+            <li>автоматическое распознавание направлений по именам файлов и возможность ручного назначения;</li>
+            <li>сопоставление элементов по координатам и выбор максимального требуемого армирования;</li>
+            <li>исходная КЭ-сетка или регулярная условная сетка заданного размера;</li>
+            <li>создание полилиний, штриховок и объектов <code>3DFACE</code> в итоговых DXF;</li>
+            <li>дополнительный экспорт PNG с настраиваемым размером, фоном и шкалой армирования;</li>
+            <li>общая или отдельные шкалы верхнего и нижнего армирования, пользовательские ступени и импорт <code>.shk</code>;</li>
+            <li>предварительные проверки типа DXF, координат и фонового армирования;</li>
+            <li>именованные конфигурации, подробный журнал и безопасная остановка обработки;</li>
+            <li>встроенные тестовые комплекты R12 и R2007;</li>
+            <li>светлая и тёмная темы, встроенная справка и проверка обновлений через GitHub.</li>
+          </ul>
+          <div class="release-actions"><a class="button" href="https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm.zip">Скачать OgibArm</a><a class="button secondary" href="https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.0-build.9">Открыть выпуск</a></div>
+        </article>
+      </div>
+    </div>
+  </main>
+  <div class="mobile-toc" data-mobile-toc>
+    <button class="mobile-toc-toggle" type="button" aria-label="Открыть список версий" aria-expanded="false" aria-controls="version-mobile-toc" data-open-label="Открыть список версий" data-close-label="Закрыть список версий" data-toc-toggle><svg class="icon-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg><svg class="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <nav class="mobile-toc-panel" id="version-mobile-toc" aria-label="Версии OgibArm" aria-hidden="true" data-toc-panel data-scroll-nav><a href="#version-1-0-0" class="is-active">v1.0.0</a></nav>
+  </div>
+  <footer><div class="wrap footer-row"><span>© <span data-current-year>2026</span> WaterFAQ · OgibArm распространяется бесплатно</span><nav><a href="index.html">Главная</a><a href="faq.html">FAQ</a><a href="terms.html">Условия</a><a href="mailto:waterfaq@ya.ru">waterfaq@ya.ru</a></nav></div></footer>
+  <button class="back-to-top" type="button" aria-label="Наверх" title="Наверх" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 11 7-7 7 7M12 4v16"/></svg></button>
+  <script src="assets/js/site.js?v=2"></script>
+</body>
+</html>

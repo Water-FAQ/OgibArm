@@ -1,0 +1,33 @@
+name: Предложить улучшение
+description: Предложите новую возможность или улучшение OgibArm
+title: "[Предложение] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Чего сейчас не хватает?
+      description: Опишите задачу или неудобство, которое должно быть решено.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Предлагаемое решение
+      description: Опишите желаемое поведение и, если возможно, приведите пример.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Категория
+      options:
+        - Исходные DXF и проверки
+        - Шкалы армирования
+        - Формирование DXF
+        - Экспорт PNG
+        - Интерфейс и управление
+        - Настройки
+        - Другое
+    validations:
+      required: true

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="OgibArm — бесплатная программа для формирования огибающих армирования по DXF из ЛИРА-САПР.">
+  <meta name="theme-color" content="#f2f5f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#181b20" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="OgibArm — огибающие армирования из DXF">
+  <meta property="og:description" content="Объединение результатов ЛИРА-САПР по направлениям NX, NY, VX и VY с выпуском DXF и PNG.">
+  <meta property="og:url" content="https://water-faq.github.io/OgibArm/">
+  <meta property="og:image" content="https://water-faq.github.io/OgibArm/assets/images/window-light.png">
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <link rel="apple-touch-icon" href="assets/images/icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2">
+  <title>OgibArm — огибающие армирования из DXF</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="index.html" aria-label="OgibArm — главная">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="assets/images/logo-dark.png">
+          <img src="assets/images/logo-light.png" alt="OgibArm" width="1876" height="421">
+        </picture>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation">
+        <svg class="icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <nav id="site-navigation" class="nav" aria-label="Основная навигация">
+        <a href="index.html" aria-current="page">Главная</a>
+        <a href="#features">Возможности</a>
+        <a href="#start">Начало работы</a>
+        <a href="faq.html">FAQ</a>
+        <a href="changelog.html">Версии</a>
+        <a href="terms.html">Условия</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow">Бесплатно · Windows 10/11 x64</div>
+        <h1>Огибающие армирования без ручного сведения DXF</h1>
+        <p class="lead">OgibArm объединяет результаты ЛИРА-САПР по направлениям <code>NX</code>, <code>NY</code>, <code>VX</code> и <code>VY</code>, выбирает максимальное требуемое армирование и формирует готовые огибающие для дальнейшей работы в CAD.</p>
+        <div class="hero-actions">
+          <div class="download-group">
+            <a id="download" class="button" href="https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm.zip">Скачать OgibArm</a>
+            <p id="version" class="meta">Последняя версия: v1.0.0</p>
+          </div>
+          <a class="button secondary" href="changelog.html">Все версии</a>
+          <a class="button secondary" href="https://www.virustotal.com/gui/file/a32795ac46e9554f7503c37f5a82b432bdbc1def81dd59b7a417a5f26487fc61">Проверка VirusTotal</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="assets/images/window-dark.png">
+          <img src="assets/images/window-light.png" alt="Главное окно OgibArm" width="1060" height="915">
+        </picture>
+      </div>
+    </section>
+
+    <section id="features" class="wrap section">
+      <div class="section-heading">
+        <h2>От набора файлов до готовой огибающей</h2>
+        <p>Параметры обработки собраны в одном окне, а исходные файлы остаются без изменений.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="card"><h3>Четыре направления</h3><p>Отдельное объединение файлов для нижнего и верхнего армирования по осям X и Y.</p></article>
+        <article class="card"><h3>Типы DXF R12 и R2007</h3><p>Работа с выгрузками ЛИРА-САПР 2021 и 2024 и автоматическое распознавание типа DXF.</p></article>
+        <article class="card"><h3>Гибкая геометрия</h3><p>Полилинии, штриховки, объекты 3DFACE, исходная КЭ-сетка или заданная условная сетка.</p></article>
+        <article class="card"><h3>Шкалы армирования</h3><p>Общая или раздельные шкалы, собственные ступени и загрузка файлов <code>.shk</code>.</p></article>
+        <article class="card"><h3>DXF и PNG</h3><p>Готовые чертежи и изображения до 8192 пикселей с белым или прозрачным фоном.</p></article>
+        <article class="card"><h3>Контроль процесса</h3><p>Предварительные проверки, журнал этапов, предупреждения и безопасная остановка обработки.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap section result-showcase" aria-labelledby="result-showcase-title">
+      <div class="section-heading">
+        <h2 id="result-showcase-title">Результаты обработки</h2>
+        <p>Отдельная огибающая для каждого загруженного и назначенного направления.</p>
+      </div>
+      <div class="carousel" data-carousel aria-roledescription="карусель">
+        <div class="carousel-viewport">
+          <figure class="carousel-slide is-active" data-carousel-slide><img src="assets/images/result-nx.png" alt="Огибающая нижнего армирования по X" width="2048" height="989"><figcaption><strong>NX</strong> · Нижняя по X</figcaption></figure>
+          <figure class="carousel-slide" data-carousel-slide><img src="assets/images/result-ny.png" alt="Огибающая нижнего армирования по Y" width="2048" height="989"><figcaption><strong>NY</strong> · Нижняя по Y</figcaption></figure>
+          <figure class="carousel-slide" data-carousel-slide><img src="assets/images/result-vx.png" alt="Огибающая верхнего армирования по X" width="2048" height="989"><figcaption><strong>VX</strong> · Верхняя по X</figcaption></figure>
+          <figure class="carousel-slide" data-carousel-slide><img src="assets/images/result-vy.png" alt="Огибающая верхнего армирования по Y" width="2048" height="989"><figcaption><strong>VY</strong> · Верхняя по Y</figcaption></figure>
+        </div>
+        <button class="carousel-arrow previous" type="button" aria-label="Предыдущий результат" data-carousel-previous><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button>
+        <button class="carousel-arrow next" type="button" aria-label="Следующий результат" data-carousel-next><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button>
+        <div class="carousel-dots" aria-label="Выбор результата">
+          <button class="is-active" type="button" aria-label="Показать NX" aria-current="true" data-carousel-dot="0"></button>
+          <button type="button" aria-label="Показать NY" aria-current="false" data-carousel-dot="1"></button>
+          <button type="button" aria-label="Показать VX" aria-current="false" data-carousel-dot="2"></button>
+          <button type="button" aria-label="Показать VY" aria-current="false" data-carousel-dot="3"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap direction-layout">
+        <div class="section-heading compact">
+          <h2>Каждое направление обрабатывается отдельно</h2>
+          <p>Программа создаёт только те результаты, для которых действительно загружены и назначены исходные файлы.</p>
+        </div>
+        <div class="direction-grid" aria-label="Обозначения направлений">
+          <div><strong>NX</strong><span>Нижняя по X</span></div>
+          <div><strong>NY</strong><span>Нижняя по Y</span></div>
+          <div><strong>VX</strong><span>Верхняя по X</span></div>
+          <div><strong>VY</strong><span>Верхняя по Y</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="start" class="wrap section">
+      <div class="section-heading">
+        <h2>Установка не требуется</h2>
+      </div>
+      <div class="start-grid">
+        <div class="card steps">
+          <div class="step"><strong>1</strong><span>Скачайте архив последней версии.</span></div>
+          <div class="step"><strong>2</strong><span>Распакуйте <code>OgibArm.zip</code> в удобную папку.</span></div>
+          <div class="step"><strong>3</strong><span>Запустите <code>OgibArm.exe</code>.</span></div>
+          <div class="step"><strong>4</strong><span>Добавьте DXF, настройте результат и нажмите «Сформировать огибающие».</span></div>
+        </div>
+        <aside class="card requirements">
+          <h3>Системные требования</h3>
+          <p>Windows 10 или Windows 11, 64-разрядная система.</p>
+          <h3>Можно начать с примера</h3>
+          <p>В настройках доступны отдельные тестовые наборы R12 и R2007. Они загружаются в главное окно без автоматического запуска обработки.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="privacy" class="wrap section slim">
+      <div class="privacy-card">
+        <div>
+          <h2>DXF остаются на вашем компьютере</h2>
+        </div>
+        <p>Исходные файлы и результаты не передаются разработчику. Интернет используется только для проверки наличия новой версии, если эта функция включена пользователем.</p>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <div class="section-heading">
+        <h2>Документация и поддержка</h2>
+      </div>
+      <div class="link-grid">
+        <a class="link-card" href="faq.html"><span>FAQ</span><strong>Ответы на частые вопросы</strong><small>Файлы, шкалы, типы DXF и решение проблем</small></a>
+        <a class="link-card" href="changelog.html"><span>Версии</span><strong>История изменений</strong><small>Актуальный выпуск и содержание обновлений</small></a>
+        <a class="link-card" href="terms.html"><span>Условия</span><strong>Правила использования</strong><small>Бесплатное распространение и ответственность</small></a>
+      </div>
+    </section>
+
+    <section id="feedback" class="wrap section feedback">
+      <div class="section-heading compact">
+        <h2>Нашли ошибку или есть предложение?</h2>
+        <p>Опишите исходные данные, ожидаемый результат и приложите журнал обработки, если это возможно.</p>
+      </div>
+      <div class="feedback-actions">
+        <a class="button" href="mailto:waterfaq@ya.ru">Написать по электронной почте</a>
+        <a class="button secondary" href="https://github.com/Water-FAQ/OgibArm/issues/new?template=bug_report.yml">Сообщить об ошибке на GitHub</a>
+        <a class="button secondary" href="https://github.com/Water-FAQ/OgibArm/issues/new?template=feature_request.yml">Предложить улучшение на GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© <span data-current-year>2026</span> WaterFAQ · OgibArm распространяется бесплатно</span>
+      <nav aria-label="Навигация в подвале"><a href="index.html">Главная</a><a href="faq.html">FAQ</a><a href="changelog.html">Версии</a><a href="terms.html">Условия</a><a href="mailto:waterfaq@ya.ru">waterfaq@ya.ru</a></nav>
+    </div>
+  </footer>
+  <button class="back-to-top" type="button" aria-label="Наверх" title="Наверх" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 11 7-7 7 7M12 4v16"/></svg></button>
+  <script src="assets/js/site.js?v=2"></script>
+</body>
+</html>

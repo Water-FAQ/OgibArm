@@ -1,0 +1,17 @@
+{
+  "name": "OgibArm",
+  "short_name": "OgibArm",
+  "description": "Формирование огибающих армирования по DXF из ЛИРА-САПР",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f2f5f9",
+  "theme_color": "#0d8cf0",
+  "icons": [
+    {
+      "src": "assets/images/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

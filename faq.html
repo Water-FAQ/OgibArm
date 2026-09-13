@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Ответы на часто задаваемые вопросы об OgibArm.">
+  <meta name="theme-color" content="#f2f5f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#181b20" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="assets/images/icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2">
+  <title>FAQ — OgibArm</title>
+</head>
+<body>
+  <header class="site-header"><div class="wrap header-row"><a class="brand" href="index.html" aria-label="OgibArm — главная"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/logo-dark.png"><img src="assets/images/logo-light.png" alt="OgibArm" width="1876" height="421"></picture></a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><svg class="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button><nav id="site-navigation" class="nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="index.html#features">Возможности</a><a href="index.html#start">Начало работы</a><a href="faq.html" aria-current="page">FAQ</a><a href="changelog.html">Версии</a><a href="terms.html">Условия</a></nav></div></header>
+
+  <main class="wrap content">
+    <div class="page-head"><h1>Часто задаваемые вопросы</h1><p>Ответы о запуске, исходных DXF, шкалах армирования, настройке результатов и решении типичных проблем.</p></div>
+    <div class="faq-layout">
+      <aside class="faq-sidebar" aria-label="Разделы FAQ">
+        <nav class="faq-toc" data-scroll-nav>
+          <a href="#faq-start" class="is-active">Начало работы</a>
+          <a href="#faq-files">Исходные DXF</a>
+          <a href="#faq-types">Типы DXF и проверки</a>
+          <a href="#faq-scales">Шкалы армирования</a>
+          <a href="#faq-results">Параметры и результаты</a>
+          <a href="#faq-support">Настройки и решение проблем</a>
+        </nav>
+        <div class="faq-controls" aria-label="Управление вопросами FAQ"><button type="button" data-faq-expand-all>Развернуть все</button><button type="button" data-faq-collapse-all>Свернуть все</button></div>
+      </aside>
+
+      <div class="faq-groups">
+        <section class="faq-group" id="faq-start" data-scroll-section>
+          <h2>Начало работы</h2>
+          <div class="faq-list">
+            <details><summary>Что делает OgibArm?</summary><div class="faq-answer"><p>OgibArm объединяет экспортированные из ЛИРА-САПР мозаики армирования и формирует отдельные огибающие для направлений NX, NY, VX и VY. Для совпадающих элементов выбирается максимальное требуемое армирование.</p></div></details>
+            <details><summary>Нужно ли устанавливать программу?</summary><div class="faq-answer"><p>Нет. Скачайте ZIP, полностью распакуйте его в доступную для записи папку и запустите <code>OgibArm.exe</code>. Запуск непосредственно из архива не рекомендуется.</p></div></details>
+            <details><summary>Какие версии Windows поддерживаются?</summary><div class="faq-answer"><p>Программа предназначена для 64-разрядных Windows 10 и Windows 11.</p></div></details>
+            <details><summary>Почему Windows может показать предупреждение при запуске?</summary><div class="faq-answer"><p>У программы нет платной цифровой подписи, поэтому SmartScreen может предупредить о неизвестном издателе. Скачивайте OgibArm только со страницы проекта или из официального выпуска GitHub.</p></div></details>
+            <details><summary>Как быстро проверить программу на примере?</summary><div class="faq-answer"><p>Откройте настройки, вкладку «Шкалы и тест», и загрузите комплект R12 для ЛИРА-САПР 2021 либо R2007 для ЛИРА-САПР 2024. Файлы появятся в главном окне, но обработка начнётся только после нажатия «Сформировать огибающие».</p></div></details>
+            <details><summary>Можно ли запустить несколько копий OgibArm?</summary><div class="faq-answer"><p>Нет. Для текущего пользователя Windows работает только один экземпляр программы. Повторный запуск выводит уже открытое окно на передний план.</p></div></details>
+          </div>
+        </section>
+
+        <section class="faq-group" id="faq-files" data-scroll-section>
+          <h2>Исходные DXF</h2>
+          <div class="faq-list">
+            <details><summary>Какие файлы принимает OgibArm?</summary><div class="faq-answer"><p>Программа принимает DXF с экспортированной мозаикой армирования в структурах R12 и R2007. Посторонние файлы при добавлении папки или перетаскивании пропускаются.</p></div></details>
+            <details><summary>Что означают NX, NY, VX и VY?</summary><div class="faq-answer"><p><code>NX</code> — нижняя по X, <code>NY</code> — нижняя по Y, <code>VX</code> — верхняя по X, <code>VY</code> — верхняя по Y.</p></div></details>
+            <details><summary>Как определяется направление файла?</summary><div class="faq-answer"><p>Направление распознаётся по префиксу в начале имени без учёта регистра. Если префикса нет или назначение нужно изменить, выберите направление вручную в столбце «Тип».</p></div></details>
+            <details><summary>Можно ли добавить несколько файлов одного направления?</summary><div class="faq-answer"><p>Да. Все назначенные одному направлению файлы объединяются в одну огибающую.</p></div></details>
+            <details><summary>Что происходит с файлом «Не назначено»?</summary><div class="faq-answer"><p>Он сохраняется среди рабочих копий и проверяется, но не участвует в формировании огибающих. Перед запуском программа предупредит о таких файлах.</p></div></details>
+            <details><summary>Изменяются ли исходные DXF?</summary><div class="faq-answer"><p>Нет. OgibArm создаёт рабочие копии в отдельной папке запуска. Назначенный префикс применяется только к копии.</p></div></details>
+            <details><summary>Добавляются ли файлы из вложенных папок?</summary><div class="faq-answer"><p>Нет. Команда «Добавить папку» и перетаскивание каталога добавляют только DXF, находящиеся непосредственно в выбранной папке.</p></div></details>
+          </div>
+        </section>
+
+        <section class="faq-group" id="faq-types" data-scroll-section>
+          <h2>Типы DXF и проверки</h2>
+          <div class="faq-list">
+            <details><summary>Чем отличаются типы DXF R12 и R2007?</summary><div class="faq-answer"><p>R12 соответствует структуре экспорта ЛИРА-САПР 2021: геометрия и ступени находятся в KLEENKA и задаются цветами ACI. R2007 соответствует структуре ЛИРА-САПР 2024 с отдельными слоями геометрии, номеров элементов, точных значений и палитры.</p></div></details>
+            <details><summary>Можно ли объединять R12 и R2007?</summary><div class="faq-answer"><p>Внутри одного направления все файлы должны иметь одинаковый тип DXF. Разные направления в одном запуске могут использовать разные типы.</p></div></details>
+            <details><summary>Как определяется тип DXF?</summary><div class="faq-answer"><p>Тип определяется по фактической структуре и содержимому файла, а не по его названию. Результат записывается в журнал.</p></div></details>
+            <details><summary>Зачем проверяются координаты?</summary><div class="faq-answer"><p>Сравнение координат помогает обнаружить случайно добавленный файл другого этажа, секции или расчётной схемы. При намеренном объединении соседних частей можно подтвердить продолжение.</p></div></details>
+            <details><summary>Что означает предупреждение о фоновом армировании?</summary><div class="faq-answer"><p>OgibArm сравнивает площадь первой строки выбранной шкалы с исходной первой ступенью DXF. Для R12 несовпадение может привести к неверному толкованию цветов; R2007 перестраивается по точным числовым значениям.</p></div></details>
+            <details><summary>Как R2007 переводится в выбранную шкалу?</summary><div class="faq-answer"><p>Берётся максимальное числовое требование и назначается первая ступень, которая полностью его покрывает. Если диапазона шкалы недостаточно, направление не формируется, а причина записывается в журнал.</p></div></details>
+            <details><summary>Можно ли продолжить после предупреждения?</summary><div class="faq-answer"><p>Да, если расхождение ожидаемо. Решение пользователя и результаты предварительных проверок сохраняются в журнале.</p></div></details>
+          </div>
+        </section>
+
+        <section class="faq-group" id="faq-scales" data-scroll-section>
+          <h2>Шкалы армирования</h2>
+          <div class="faq-list">
+            <details><summary>Что представляет собой шкала армирования?</summary><div class="faq-answer"><p>Каждая строка связывает обозначение армирования с цветом AutoCAD ACI. Порядок строк задаёт последовательность ступеней от меньшей к большей.</p></div></details>
+            <details><summary>Как записывается армирование?</summary><div class="faq-answer"><p>Основная запись имеет вид <code>s[шаг]d[диаметр]</code>. Например, <code>s200d10</code> означает Ø10 с шагом 200 мм, а знак <code>+</code> добавляет вторую сетку в той же ступени.</p></div></details>
+            <details><summary>Можно ли использовать разные шкалы сверху и снизу?</summary><div class="faq-answer"><p>Да. Снимите флажок общей шкалы, чтобы независимо выбрать и редактировать шкалы нижнего и верхнего армирования.</p></div></details>
+            <details><summary>Можно ли создать собственную шкалу?</summary><div class="faq-answer"><p>Да. Строки можно добавлять, удалять, переставлять, вставлять из буфера и сохранять под отдельным именем. Цвет выбирается из палитры ACI.</p></div></details>
+            <details><summary>Как загрузить шкалу ЛИРА-САПР?</summary><div class="faq-answer"><p>Нажмите «Загрузить .shk» либо перетащите файл <code>.shk</code> в нужную таблицу. Обозначения и цвета будут импортированы.</p></div></details>
+            <details><summary>Что делать, если верхней ступени недостаточно?</summary><div class="faq-answer"><p>Добавьте ступень, покрывающую максимальную потребность, и повторите обработку. Необходимые значения указаны в журнале.</p></div></details>
+          </div>
+        </section>
+
+        <section class="faq-group" id="faq-results" data-scroll-section>
+          <h2>Параметры и результаты</h2>
+          <div class="faq-list">
+            <details><summary>Чем исходная КЭ-сетка отличается от условной?</summary><div class="faq-answer"><p>Исходная КЭ-сетка сохраняет геометрию элементов DXF. Условная сетка создаёт регулярные ячейки заданного размера и назначает ступень по области, в которую попадает центр ячейки.</p></div></details>
+            <details><summary>Что задаёт округление координат?</summary><div class="faq-answer"><p>Параметр задаёт шаг приведения координат в миллиметрах и используется при сопоставлении геометрии разных файлов.</p></div></details>
+            <details><summary>Какие объекты можно создать в DXF?</summary><div class="faq-answer"><p>Доступны полилинии, штриховки и объекты <code>3DFACE</code>. Можно выбрать любое сочетание, но хотя бы один из вариантов обязателен.</p></div></details>
+            <details><summary>Можно ли создать только PNG?</summary><div class="faq-answer"><p>Нет. PNG является дополнительным представлением огибающей. Вместе с ним должны быть выбраны полилинии, штриховки или <code>3DFACE</code>.</p></div></details>
+            <details><summary>Какие параметры доступны для PNG?</summary><div class="faq-answer"><p>Длина большей стороны 2048, 4096 или 8192 пикселей, белый либо прозрачный фон и отображение шкалы армирования.</p></div></details>
+            <details><summary>Где сохраняются результаты?</summary><div class="faq-answer"><p>Для каждого запуска создаётся отдельная папка внутри <code>OgibArm_Work</code> с рабочими копиями, итоговыми DXF и журналом.</p></div></details>
+            <details><summary>Какие итоговые файлы создаются?</summary><div class="faq-answer"><p>От одного до четырёх DXF — только для загруженных и назначенных направлений. При включённом PNG рядом появляется одноимённое изображение.</p></div></details>
+            <details><summary>Можно ли добавить префикс к итоговым файлам?</summary><div class="faq-answer"><p>Да. Значение поля «Префикс итоговых файлов» добавляется перед стандартным названием каждой огибающей.</p></div></details>
+            <details><summary>Добавляются ли пустые слои и ступени?</summary><div class="faq-answer"><p>Нет. В итоговый DXF и легенду включаются только фактически использованные ступени.</p></div></details>
+          </div>
+        </section>
+
+        <section class="faq-group" id="faq-support" data-scroll-section>
+          <h2>Настройки и решение проблем</h2>
+          <div class="faq-list">
+            <details><summary>Что сохраняется в конфигурации?</summary><div class="faq-answer"><p>Шкалы, основа построения, числовые параметры, состав результата, параметры PNG, префикс и открытие папки. Список исходных файлов и общие настройки интерфейса не входят.</p></div></details>
+            <details><summary>Можно ли восстановить предыдущий список DXF?</summary><div class="faq-answer"><p>Да. Это поведение включается в основных настройках. При следующем запуске программа добавит ранее использованные файлы, если они доступны.</p></div></details>
+            <details><summary>Зачем нужен подробный журнал?</summary><div class="faq-answer"><p>Он фиксирует параметры, состав групп, количество элементов, используемые ступени, размеры файлов и длительность этапов. Для обычной работы можно выбрать краткий режим.</p></div></details>
+            <details><summary>Что сохраняется при остановке обработки?</summary><div class="faq-answer"><p>Рабочие копии, журнал и уже сформированные результаты. Незавершённый временный DXF в итоговую папку не переносится.</p></div></details>
+            <details><summary>Останавливает ли ошибка одного направления остальные?</summary><div class="faq-answer"><p>Не всегда. Направления обрабатываются независимо, поэтому программа по возможности продолжит работу с остальными.</p></div></details>
+            <details><summary>Что делать, если обработка не начинается?</summary><div class="faq-answer"><p>Назначьте хотя бы одному файлу NX, NY, VX или VY и выберите полилинии, штриховки либо <code>3DFACE</code>. Затем проверьте сообщения и журнал.</p></div></details>
+            <details><summary>Что делать, если DXF не читается?</summary><div class="faq-answer"><p>Убедитесь, что файл экспортирован как мозаика армирования поддерживаемой структуры R12 или R2007. Подробности об отсутствующих слоях или геометрии будут записаны в журнал.</p></div></details>
+            <details><summary>Нужен ли интернет для обработки DXF?</summary><div class="faq-answer"><p>Нет. Подключение используется только для проверки новой версии, если автоматическая проверка включена или нажата кнопка «Проверить сейчас».</p></div></details>
+            <details><summary>Как проверить наличие обновления?</summary><div class="faq-answer"><p>Нажмите на номер версии внизу главного окна. В открывшемся окне можно запустить проверку и настроить её автоматическое выполнение.</p></div></details>
+            <details><summary>Как полностью удалить OgibArm?</summary><div class="faq-answer"><p>Закройте программу и удалите папку с <code>OgibArm.exe</code>. Папку <code>OgibArm_Work</code> удаляйте отдельно после сохранения нужных результатов, шкал и конфигураций.</p></div></details>
+          </div>
+        </section>
+        <div class="page-actions"><a class="button" href="https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm.zip">Скачать OgibArm</a><a class="button secondary" href="mailto:waterfaq@ya.ru">Задать вопрос</a></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="mobile-toc" data-mobile-toc>
+    <button class="mobile-toc-toggle" type="button" aria-label="Открыть разделы FAQ" aria-expanded="false" aria-controls="faq-mobile-toc" data-open-label="Открыть разделы FAQ" data-close-label="Закрыть разделы FAQ" data-toc-toggle><svg class="icon-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg><svg class="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <nav class="mobile-toc-panel" id="faq-mobile-toc" aria-label="Разделы FAQ" aria-hidden="true" data-toc-panel data-scroll-nav>
+      <a href="#faq-start" class="is-active">Начало работы</a><a href="#faq-files">Исходные DXF</a><a href="#faq-types">Типы DXF и проверки</a><a href="#faq-scales">Шкалы армирования</a><a href="#faq-results">Параметры и результаты</a><a href="#faq-support">Настройки и решение проблем</a>
+      <div class="faq-controls"><button type="button" data-faq-expand-all>Развернуть все</button><button type="button" data-faq-collapse-all>Свернуть все</button></div>
+    </nav>
+  </div>
+  <footer><div class="wrap footer-row"><span>© <span data-current-year>2026</span> WaterFAQ · OgibArm распространяется бесплатно</span><nav><a href="index.html">Главная</a><a href="changelog.html">Версии</a><a href="terms.html">Условия</a><a href="mailto:waterfaq@ya.ru">waterfaq@ya.ru</a></nav></div></footer>
+  <button class="back-to-top" type="button" aria-label="Наверх" title="Наверх" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 11 7-7 7 7M12 4v16"/></svg></button>
+  <script src="assets/js/site.js?v=2"></script>
+</body>
+</html>
