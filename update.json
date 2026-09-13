@@ -1,16 +1,16 @@
 {
   "version": "1.0.0",
-  "build": 8,
+  "build": 9,
   "url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm.zip",
   "download_url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm.zip",
-  "release_url": "https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.0",
+  "release_url": "https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.0-build.9",
   "file_name": "OgibArm.zip",
-  "sha256": "d1dfb5facc1710028dc04227375fb6745e798789525ed9c4495d2c0ac0c86cae",
-  "size": 64380310,
+  "sha256": "00777b4a888e3d6157de4d89ff52eb3f52a22efa650e6c26d0225d6976e247fb",
+  "size": 67546171,
   "published_at": "2026-09-13",
   "notes": [
     "Формирование огибающих армирования по DXF из ЛИРА-САПР.",
     "Поддержка типов DXF R12 и R2007.",
-    "Проверки координат, фонового армирования и единого типа DXF внутри направления."
+    "Улучшены справка, тестовые наборы и проверка обновлений."
   ]
 }
