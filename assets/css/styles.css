@@ -203,8 +203,8 @@ p { margin-top: 0; }
 .link-card > span { color: var(--accent); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; }
 .link-card strong { margin-top: 12px; font-size: 20px; }
 .link-card small { margin-top: 7px; color: var(--muted); font-size: 14px; }
-.feedback { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-top: 30px; }
-.feedback-actions { display: flex; flex: 0 0 auto; flex-wrap: wrap; gap: 10px; }
+.feedback { display: flex; align-items: flex-start; flex-direction: column; gap: 20px; padding-top: 30px; }
+.feedback-actions { display: flex; width: 100%; flex-wrap: wrap; gap: 10px; }
 
 .inner-page { min-height: calc(100vh - 150px); padding-block: 54px 70px; }
 .page-heading { max-width: 900px; margin-bottom: 28px; }
@@ -354,6 +354,7 @@ footer { margin-top: 40px; border-top: 1px solid var(--border); color: var(--mut
   .lead { font-size: 17px; }
   .hero-actions, .feedback-actions, .page-actions, .release-actions { display: grid; width: 100%; }
   .hero-actions .button, .feedback-actions .button, .page-actions .button, .release-actions .button { width: 100%; }
+  .virustotal-button { display: none; }
   .section { padding-block: 38px; }
   .feature-grid, .direction-grid, .start-grid, .link-grid, .privacy-card { grid-template-columns: 1fr; }
   .direction-layout { padding-block: 38px; }
