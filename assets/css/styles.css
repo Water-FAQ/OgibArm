@@ -167,7 +167,7 @@ p { margin-top: 0; }
 .carousel-viewport { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: #000; box-shadow: var(--shadow); }
 .carousel-slide { display: none; margin: 0; }
 .carousel-slide.is-active { display: block; }
-.carousel-slide img { width: 100%; aspect-ratio: 2048 / 989; object-fit: contain; background: #000; }
+.carousel-slide img { width: 100%; height: auto; aspect-ratio: 2048 / 989; object-fit: contain; background: #000; }
 .carousel-slide figcaption { padding: 13px 18px; color: var(--muted); background: var(--panel); text-align: center; }
 .carousel-slide figcaption strong { color: var(--accent); }
 .carousel-arrow { position: absolute; top: calc(50% - 25px); display: grid; width: 46px; height: 46px; padding: 0; place-items: center; border: 1px solid rgba(255,255,255,.34); border-radius: 12px; color: #fff; background: rgba(18,25,35,.78); box-shadow: 0 6px 18px rgba(0,0,0,.25); cursor: pointer; transform: translateY(-50%); transition: background .16s ease, border-color .16s ease; }
