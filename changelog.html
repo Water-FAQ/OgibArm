@@ -7,16 +7,39 @@
   <meta name="theme-color" content="#f2f5f9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#181b20" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="assets/images/icon.png">
-  <link rel="stylesheet" href="assets/css/styles.css?v=4">
+  <link rel="stylesheet" href="assets/css/styles.css?v=5">
   <title>История версий — OgibArm</title>
 </head>
 <body>
-  <header class="site-header"><div class="wrap header-row"><a class="brand" href="index.html" aria-label="OgibArm — главная"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/logo-dark.png"><img src="assets/images/logo-light.png" alt="OgibArm" width="1876" height="421"></picture></a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><svg class="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button><nav id="site-navigation" class="nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="index.html#features">Возможности</a><a href="index.html#start">Начало работы</a><a href="faq.html">FAQ</a><a href="changelog.html" aria-current="page">Версии</a><a href="terms.html">Условия</a></nav></div></header>
+  <header class="site-header"><div class="wrap top"><a class="logo" href="index.html" aria-label="OgibArm — главная"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/logo-dark.png"><img src="assets/images/logo-light.png" alt="OgibArm" width="2048" height="507"></picture></a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><svg class="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button><nav id="site-navigation" class="nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="index.html#features">Возможности</a><a href="index.html#start">Начало работы</a><a href="faq.html">FAQ</a><a href="changelog.html" aria-current="page">Версии</a><a href="terms.html">Условия</a></nav></div></header>
   <main class="wrap content">
-    <div class="page-head"><h1>История версий</h1><p>Основные возможности опубликованных версий OgibArm.</p></div>
+    <div class="page-head"><h1>История версий</h1><p>Основные изменения опубликованных версий OgibArm. Предыдущие выпуски сохраняются в GitHub Releases.</p></div>
     <div class="version-layout">
-      <aside class="version-sidebar" aria-label="Версии OgibArm"><nav class="version-toc" data-scroll-nav><a href="#version-1-0-0" class="is-active">v1.0.0</a></nav></aside>
+      <aside class="version-sidebar" aria-label="Версии OgibArm"><nav class="version-toc" data-scroll-nav><a href="#version-1-0-1" class="is-active">v1.0.1</a><a href="#version-1-0-0">v1.0.0</a></nav></aside>
       <div class="release-list">
+        <article class="release" id="version-1-0-1" data-scroll-section>
+          <div class="release-head"><h2>OgibArm v1.0.1</h2><time datetime="2026-09-14">14 сентября 2026</time></div>
+          <p>Исправление тестовых комплектов и расширение системы обновлений.</p>
+          <ul>
+            <li>исправлено отображение русских имён встроенных тестовых DXF в папке и таблице;</li>
+            <li>при загрузке тестов R12 автоматически выбирается шкала «Фон s200d12», а для R2007 — «Фон s200d8»;</li>
+            <li>прозрачный фон PNG выбран по умолчанию, в том числе после сброса настроек;</li>
+            <li>исправлена загрузка встроенных тестовых файлов: программа проверяет состав архива, извлекает DXF и добавляет их в главное окно только после успешной проверки;</li>
+            <li>заменены тестовые комплекты: R12 содержит 8 DXF, R2007 — 4 DXF; в каждом комплекте представлены направления NX, NY, VX и VY;</li>
+            <li>добавлена проверка обновлений при запуске и фоновая проверка один раз в сутки;</li>
+            <li>при обнаружении новой версии выводится окно с перечнем изменений и действиями «Обновить», «Позже» и «Пропустить эту версию»;</li>
+            <li>добавлена загрузка полного архива выпуска с отображением размера, процента и этапа;</li>
+            <li>перед установкой проверяются размер файла, контрольная сумма SHA-256 и наличие <code>OgibArm.exe</code> в архиве;</li>
+            <li>обновление откладывается до завершения или остановки текущей обработки DXF;</li>
+            <li>добавлена безопасная замена <code>OgibArm.exe</code> отдельным помощником с резервной копией, автоматическим запуском новой версии и восстановлением предыдущей при ошибке;</li>
+            <li>служебный компонент обновления встроен в <code>OgibArm.exe</code>, создаётся только во временной папке на время установки и удаляется после успешного обновления;</li>
+            <li>папка <code>OgibArm_Work</code>, настройки, конфигурации, шкалы и результаты при обновлении не изменяются;</li>
+            <li>в справку добавлены официальная страница OgibArm и страница релизов GitHub;</li>
+            <li>повторный запуск выводит работающую программу на передний план и показывает сообщение о невозможности запуска второй копии;</li>
+            <li>дополнены сведения о программе в свойствах EXE.</li>
+          </ul>
+          <div class="actions"><a class="button" href="https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.1">Открыть выпуск</a></div>
+        </article>
         <article class="release" id="version-1-0-0" data-scroll-section>
           <div class="release-head"><h2>OgibArm v1.0.0</h2><time datetime="2026-09-13">13 сентября 2026</time></div>
           <p>Первый публичный выпуск.</p>
@@ -34,17 +57,17 @@
             <li>встроенные тестовые комплекты R12 и R2007;</li>
             <li>светлая и тёмная темы, встроенная справка и проверка обновлений через GitHub.</li>
           </ul>
-          <div class="release-actions"><a class="button" href="https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm.zip">Скачать OgibArm</a><a class="button secondary" href="https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.0">Открыть выпуск</a></div>
+          <div class="actions"><a class="button secondary" href="https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.0">Открыть выпуск</a></div>
         </article>
       </div>
     </div>
   </main>
   <div class="mobile-toc" data-mobile-toc>
     <button class="mobile-toc-toggle" type="button" aria-label="Открыть список версий" aria-expanded="false" aria-controls="version-mobile-toc" data-open-label="Открыть список версий" data-close-label="Закрыть список версий" data-toc-toggle><svg class="icon-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg><svg class="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-    <nav class="mobile-toc-panel" id="version-mobile-toc" aria-label="Версии OgibArm" aria-hidden="true" data-toc-panel data-scroll-nav><a href="#version-1-0-0" class="is-active">v1.0.0</a></nav>
+    <nav class="mobile-toc-panel" id="version-mobile-toc" aria-label="Версии OgibArm" aria-hidden="true" data-toc-panel data-scroll-nav><a href="#version-1-0-1" class="is-active">v1.0.1</a><a href="#version-1-0-0">v1.0.0</a></nav>
   </div>
-  <footer><div class="wrap footer-row"><span>© <span data-current-year>2026</span> WaterFAQ · OgibArm распространяется бесплатно</span><nav><a href="index.html">Главная</a><a href="faq.html">FAQ</a><a href="terms.html">Условия</a><a href="mailto:waterfaq@ya.ru">waterfaq@ya.ru</a></nav></div></footer>
+  <footer class="wrap"><span>© 2026 WaterFAQ · OgibArm распространяется бесплатно</span><nav><a href="index.html">Главная</a><a href="faq.html">FAQ</a><a href="changelog.html">Версии</a><a href="terms.html">Условия</a><a href="mailto:waterfaq@ya.ru">waterfaq@ya.ru</a><a href="https://github.com/Water-FAQ/OgibArm">GitHub</a></nav></footer>
   <button class="back-to-top" type="button" aria-label="Наверх" title="Наверх" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 11 7-7 7 7M12 4v16"/></svg></button>
-  <script src="assets/js/site.js?v=2"></script>
+  <script src="assets/js/site.js?v=3"></script>
 </body>
 </html>

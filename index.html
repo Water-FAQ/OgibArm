@@ -14,16 +14,16 @@
   <link rel="icon" type="image/png" href="assets/images/icon.png">
   <link rel="apple-touch-icon" href="assets/images/icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="assets/css/styles.css?v=4">
+  <link rel="stylesheet" href="assets/css/styles.css?v=5">
   <title>OgibArm — огибающие армирования из DXF</title>
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap header-row">
-      <a class="brand" href="index.html" aria-label="OgibArm — главная">
+    <div class="wrap top">
+      <a class="logo" href="index.html" aria-label="OgibArm — главная">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="assets/images/logo-dark.png">
-          <img src="assets/images/logo-light.png" alt="OgibArm" width="1876" height="421">
+          <img src="assets/images/logo-light.png" alt="OgibArm" width="2048" height="507">
         </picture>
       </a>
       <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation">
@@ -49,11 +49,10 @@
         <p class="lead">OgibArm объединяет результаты ЛИРА-САПР по направлениям <code>NX</code>, <code>NY</code>, <code>VX</code> и <code>VY</code>, выбирает максимальное требуемое армирование и формирует готовые огибающие для дальнейшей работы в CAD.</p>
         <div class="hero-actions">
           <div class="download-group">
-            <a id="download" class="button" href="https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm.zip">Скачать OgibArm</a>
-            <p id="version" class="meta">Последняя версия: v1.0.0</p>
+            <a id="download" class="button" href="https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.1.zip">Скачать OgibArm</a>
+            <p id="version" class="meta">Последняя версия: v1.0.1</p>
           </div>
           <a class="button secondary" href="changelog.html">Все версии</a>
-          <a class="button secondary virustotal-button" href="https://www.virustotal.com/gui/file/a32795ac46e9554f7503c37f5a82b432bdbc1def81dd59b7a417a5f26487fc61">VirusTotal</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -124,7 +123,7 @@
       <div class="start-grid">
         <div class="card steps">
           <div class="step"><strong>1</strong><span>Скачайте архив последней версии.</span></div>
-          <div class="step"><strong>2</strong><span>Распакуйте <code>OgibArm.zip</code> в удобную папку.</span></div>
+          <div class="step"><strong>2</strong><span>Распакуйте <code>OgibArm_1.0.1.zip</code> в удобную папку.</span></div>
           <div class="step"><strong>3</strong><span>Запустите <code>OgibArm.exe</code>.</span></div>
           <div class="step"><strong>4</strong><span>Добавьте DXF, настройте результат и нажмите «Сформировать огибающие».</span></div>
         </div>
@@ -170,13 +169,11 @@
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footer-row">
-      <span>© <span data-current-year>2026</span> WaterFAQ · OgibArm распространяется бесплатно</span>
-      <nav aria-label="Навигация в подвале"><a href="index.html">Главная</a><a href="faq.html">FAQ</a><a href="changelog.html">Версии</a><a href="terms.html">Условия</a><a href="mailto:waterfaq@ya.ru">waterfaq@ya.ru</a></nav>
-    </div>
+  <footer class="wrap">
+    <span>© 2026 WaterFAQ · OgibArm распространяется бесплатно</span>
+    <nav aria-label="Навигация в подвале"><a href="index.html">Главная</a><a href="faq.html">FAQ</a><a href="changelog.html">Версии</a><a href="terms.html">Условия</a><a href="mailto:waterfaq@ya.ru">waterfaq@ya.ru</a><a href="https://github.com/Water-FAQ/OgibArm">GitHub</a></nav>
   </footer>
   <button class="back-to-top" type="button" aria-label="Наверх" title="Наверх" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 11 7-7 7 7M12 4v16"/></svg></button>
-  <script src="assets/js/site.js?v=2"></script>
+  <script src="assets/js/site.js?v=3"></script>
 </body>
 </html>

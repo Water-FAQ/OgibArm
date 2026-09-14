@@ -7,11 +7,11 @@
   <meta name="theme-color" content="#f2f5f9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#181b20" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="assets/images/icon.png">
-  <link rel="stylesheet" href="assets/css/styles.css?v=4">
+  <link rel="stylesheet" href="assets/css/styles.css?v=5">
   <title>FAQ — OgibArm</title>
 </head>
 <body>
-  <header class="site-header"><div class="wrap header-row"><a class="brand" href="index.html" aria-label="OgibArm — главная"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/logo-dark.png"><img src="assets/images/logo-light.png" alt="OgibArm" width="1876" height="421"></picture></a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><svg class="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button><nav id="site-navigation" class="nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="index.html#features">Возможности</a><a href="index.html#start">Начало работы</a><a href="faq.html" aria-current="page">FAQ</a><a href="changelog.html">Версии</a><a href="terms.html">Условия</a></nav></div></header>
+  <header class="site-header"><div class="wrap top"><a class="logo" href="index.html" aria-label="OgibArm — главная"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/images/logo-dark.png"><img src="assets/images/logo-light.png" alt="OgibArm" width="2048" height="507"></picture></a><button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><svg class="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="icon-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button><nav id="site-navigation" class="nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="index.html#features">Возможности</a><a href="index.html#start">Начало работы</a><a href="faq.html" aria-current="page">FAQ</a><a href="changelog.html">Версии</a><a href="terms.html">Условия</a></nav></div></header>
 
   <main class="wrap content">
     <div class="page-head"><h1>Часто задаваемые вопросы</h1><p>Ответы о запуске, исходных DXF, шкалах армирования, настройке результатов и решении типичных проблем.</p></div>
@@ -105,11 +105,11 @@
             <details><summary>Что делать, если обработка не начинается?</summary><div class="faq-answer"><p>Назначьте хотя бы одному файлу NX, NY, VX или VY и выберите полилинии, штриховки либо <code>3DFACE</code>. Затем проверьте сообщения и журнал.</p></div></details>
             <details><summary>Что делать, если DXF не читается?</summary><div class="faq-answer"><p>Убедитесь, что файл экспортирован как мозаика армирования поддерживаемой структуры R12 или R2007. Подробности об отсутствующих слоях или геометрии будут записаны в журнал.</p></div></details>
             <details><summary>Нужен ли интернет для обработки DXF?</summary><div class="faq-answer"><p>Нет. Подключение используется только для проверки новой версии, если автоматическая проверка включена или нажата кнопка «Проверить сейчас».</p></div></details>
-            <details><summary>Как проверить наличие обновления?</summary><div class="faq-answer"><p>Нажмите на номер версии внизу главного окна. В открывшемся окне можно запустить проверку и настроить её автоматическое выполнение.</p></div></details>
+            <details><summary>Как проверить наличие обновления?</summary><div class="faq-answer"><p>Нажмите на номер версии в левом нижнем углу главного окна. В открывшемся окне можно запустить проверку и настроить её автоматическое выполнение.</p></div></details>
             <details><summary>Как полностью удалить OgibArm?</summary><div class="faq-answer"><p>Закройте программу и удалите папку с <code>OgibArm.exe</code>. Папку <code>OgibArm_Work</code> удаляйте отдельно после сохранения нужных результатов, шкал и конфигураций.</p></div></details>
           </div>
         </section>
-        <div class="page-actions"><a class="button" href="https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm.zip">Скачать OgibArm</a><a class="button secondary" href="mailto:waterfaq@ya.ru">Задать вопрос</a></div>
+        <div class="page-actions"><a class="button" href="https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.1.zip">Скачать OgibArm</a><a class="button secondary" href="mailto:waterfaq@ya.ru">Задать вопрос</a></div>
       </div>
     </div>
   </main>
@@ -121,8 +121,8 @@
       <div class="faq-controls"><button type="button" data-faq-expand-all>Развернуть все</button><button type="button" data-faq-collapse-all>Свернуть все</button></div>
     </nav>
   </div>
-  <footer><div class="wrap footer-row"><span>© <span data-current-year>2026</span> WaterFAQ · OgibArm распространяется бесплатно</span><nav><a href="index.html">Главная</a><a href="changelog.html">Версии</a><a href="terms.html">Условия</a><a href="mailto:waterfaq@ya.ru">waterfaq@ya.ru</a></nav></div></footer>
+  <footer class="wrap"><span>© 2026 WaterFAQ · OgibArm распространяется бесплатно</span><nav><a href="index.html">Главная</a><a href="faq.html">FAQ</a><a href="changelog.html">Версии</a><a href="terms.html">Условия</a><a href="mailto:waterfaq@ya.ru">waterfaq@ya.ru</a><a href="https://github.com/Water-FAQ/OgibArm">GitHub</a></nav></footer>
   <button class="back-to-top" type="button" aria-label="Наверх" title="Наверх" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 11 7-7 7 7M12 4v16"/></svg></button>
-  <script src="assets/js/site.js?v=2"></script>
+  <script src="assets/js/site.js?v=3"></script>
 </body>
 </html>

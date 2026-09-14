@@ -1,22 +1,11 @@
 (() => {
   const menuButton = document.querySelector('.menu-toggle');
   const navigation = document.querySelector('.nav');
-  const mobileToc = document.querySelector('[data-mobile-toc]');
-  const tocButton = mobileToc?.querySelector('[data-toc-toggle]');
-  const tocPanel = mobileToc?.querySelector('[data-toc-panel]');
 
   const closeMenu = () => {
     if (!menuButton || !navigation) return;
     menuButton.setAttribute('aria-expanded', 'false');
     navigation.classList.remove('is-open');
-  };
-
-  const closeMobileToc = () => {
-    if (!tocButton || !tocPanel) return;
-    tocButton.setAttribute('aria-expanded', 'false');
-    tocButton.setAttribute('aria-label', tocButton.dataset.openLabel);
-    tocPanel.setAttribute('aria-hidden', 'true');
-    tocPanel.classList.remove('is-open');
   };
 
   if (menuButton && navigation) {
@@ -37,9 +26,21 @@
       if (event.key === 'Escape') closeMenu();
     });
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 860) closeMenu();
+      if (window.innerWidth > 820) closeMenu();
     });
   }
+
+  const mobileToc = document.querySelector('[data-mobile-toc]');
+  const tocButton = mobileToc?.querySelector('[data-toc-toggle]');
+  const tocPanel = mobileToc?.querySelector('[data-toc-panel]');
+
+  const closeMobileToc = () => {
+    if (!tocButton || !tocPanel) return;
+    tocButton.setAttribute('aria-expanded', 'false');
+    tocButton.setAttribute('aria-label', tocButton.dataset.openLabel);
+    tocPanel.setAttribute('aria-hidden', 'true');
+    tocPanel.classList.remove('is-open');
+  };
 
   if (mobileToc && tocButton && tocPanel) {
     tocButton.addEventListener('click', (event) => {
@@ -61,7 +62,7 @@
       if (event.key === 'Escape') closeMobileToc();
     });
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 680) closeMobileToc();
+      if (window.innerWidth > 560) closeMobileToc();
     });
   }
 
@@ -79,11 +80,13 @@
 
   const faqDetails = [...document.querySelectorAll('.faq-list details')];
   let bulkFaqChange = false;
+
   const getTocTop = () => {
     const sidebar = document.querySelector('.faq-sidebar, .version-sidebar');
     if (!sidebar || window.getComputedStyle(sidebar).display === 'none') return 16;
     return Math.max(0, Number.parseFloat(window.getComputedStyle(sidebar).top) || 0);
   };
+
   const desktopFaqTocIsVisible = () => {
     const sidebar = document.querySelector('.faq-sidebar');
     return Boolean(sidebar && window.getComputedStyle(sidebar).display !== 'none');
@@ -109,15 +112,24 @@
       window.dispatchEvent(new Event('scroll'));
     }, 100);
   };
-  document.querySelectorAll('[data-faq-expand-all]').forEach((button) => button.addEventListener('click', () => setAllFaqDetails(true)));
-  document.querySelectorAll('[data-faq-collapse-all]').forEach((button) => button.addEventListener('click', () => setAllFaqDetails(false)));
+
+  document.querySelectorAll('[data-faq-expand-all]').forEach((button) => {
+    button.addEventListener('click', () => setAllFaqDetails(true));
+  });
+  document.querySelectorAll('[data-faq-collapse-all]').forEach((button) => {
+    button.addEventListener('click', () => setAllFaqDetails(false));
+  });
 
   const scrollSections = [...document.querySelectorAll('[data-scroll-section]')];
   const scrollLinks = [...document.querySelectorAll('[data-scroll-nav] a')];
   if (scrollSections.length) {
     let scheduled = false;
     let pinnedSectionId = null;
-    const setActiveSection = (id) => scrollLinks.forEach((link) => link.classList.toggle('is-active', link.hash === `#${id}`));
+
+    const setActiveSection = (id) => {
+      scrollLinks.forEach((link) => link.classList.toggle('is-active', link.hash === `#${id}`));
+    };
+
     const updateActiveSection = () => {
       scheduled = false;
       if (pinnedSectionId) {
@@ -127,42 +139,56 @@
       let active = scrollSections[0];
       const trackingLine = Math.max(getTocTop(), window.innerHeight * 0.55);
       scrollSections.forEach((section) => {
-        const target = section.matches('.faq-group') ? section.querySelector('.faq-list details') || section : section;
-        if (target.getBoundingClientRect().top <= trackingLine) active = section;
+        const trackingTarget = section.matches('.faq-group')
+          ? section.querySelector('.faq-list details') || section
+          : section;
+        if (trackingTarget.getBoundingClientRect().top <= trackingLine) active = section;
       });
+
       setActiveSection(active.id);
     };
-    const scheduleUpdate = () => {
+
+    const scheduleActiveSectionUpdate = () => {
       if (scheduled) return;
       scheduled = true;
       window.requestAnimationFrame(updateActiveSection);
     };
+
     const scrollToSection = (id) => {
       const target = document.getElementById(id);
       if (!target) return;
       pinnedSectionId = id;
-      const alignmentTarget = target.matches('.faq-group') && desktopFaqTocIsVisible() ? target.querySelector('.faq-list details') || target : target;
+      const alignmentTarget = target.matches('.faq-group') && desktopFaqTocIsVisible()
+        ? target.querySelector('.faq-list details') || target
+        : target;
       const top = alignmentTarget.getBoundingClientRect().top + window.scrollY - getTocTop();
       window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
       setActiveSection(id);
     };
-    scrollLinks.forEach((link) => link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const id = link.hash.slice(1);
-      window.history.replaceState(null, '', `#${id}`);
-      scrollToSection(id);
-    }));
-    window.addEventListener('scroll', scheduleUpdate, { passive: true });
-    window.addEventListener('resize', scheduleUpdate);
-    const releasePin = () => {
+
+    scrollLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const id = link.hash.slice(1);
+        window.history.replaceState(null, '', `#${id}`);
+        scrollToSection(id);
+      });
+    });
+
+    window.addEventListener('scroll', scheduleActiveSectionUpdate, { passive: true });
+    window.addEventListener('resize', scheduleActiveSectionUpdate);
+    window.addEventListener('hashchange', scheduleActiveSectionUpdate);
+    const releasePinnedSection = () => {
       if (!pinnedSectionId) return;
       pinnedSectionId = null;
-      scheduleUpdate();
+      scheduleActiveSectionUpdate();
     };
-    window.addEventListener('wheel', releasePin, { passive: true });
-    window.addEventListener('touchstart', releasePin, { passive: true });
+    window.addEventListener('wheel', releasePinnedSection, { passive: true });
+    window.addEventListener('touchstart', releasePinnedSection, { passive: true });
     window.addEventListener('keydown', (event) => {
-      if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) releasePin();
+      if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) {
+        releasePinnedSection();
+      }
     });
     updateActiveSection();
   }
@@ -210,9 +236,6 @@
     start();
   });
 
-  document.querySelectorAll('[data-current-year]').forEach((node) => {
-    node.textContent = String(new Date().getFullYear());
-  });
   const versionNode = document.getElementById('version');
   const downloadNode = document.getElementById('download');
   if (versionNode || downloadNode) {

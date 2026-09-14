@@ -1,16 +1,19 @@
 {
-  "version": "1.0.0",
-  "build": 9,
-  "url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm.zip",
-  "download_url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm.zip",
-  "release_url": "https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.0",
-  "file_name": "OgibArm.zip",
-  "sha256": "00777b4a888e3d6157de4d89ff52eb3f52a22efa650e6c26d0225d6976e247fb",
-  "size": 67078472,
-  "published_at": "2026-09-13",
+  "version": "1.0.1",
+  "build": 3,
+  "url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.1.zip",
+  "download_url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.1.zip",
+  "release_url": "https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.1",
+  "file_name": "OgibArm_1.0.1.zip",
+  "sha256": "b1bdd92a56491582732269ed1afd1d9f292b4463b1033bdf8529d5fec7541581",
+  "size": 72056274,
+  "published_at": "2026-09-14",
   "notes": [
-    "Формирование огибающих армирования по DXF из ЛИРА-САПР.",
-    "Поддержка типов DXF R12 и R2007.",
-    "Встроены справка, тестовые наборы R12 и R2007 и проверка обновлений через GitHub."
+    "Исправлено отображение русских имён встроенных тестовых DXF.",
+    "Для тестов R12 и R2007 автоматически выбираются соответствующие фоновые шкалы.",
+    "Прозрачный фон PNG выбран по умолчанию.",
+    "Обновлены и усилены проверки встроенных тестовых комплектов.",
+    "Добавлены автоматическая проверка обновлений, безопасная загрузка и установка с восстановлением предыдущей версии при ошибке.",
+    "Повторный запуск выводит работающую программу на передний план и не создаёт вторую копию."
   ]
 }
