@@ -1,15 +1,15 @@
 {
   "version": "1.0.2",
-  "build": 4,
+  "build": 5,
   "url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.2.zip",
   "download_url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.2.zip",
   "release_url": "https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.2",
   "file_name": "OgibArm_1.0.2.zip",
-  "sha256": "0614f0ba52f8dfe76cf640213d89bf6fca739563379e92d6995aed9fb1bd4d1b",
-  "size": 72055001,
+  "sha256": "a80df111a2c230c02344e8fbaca815a6df3e5aaf6e291ceedb6555d65704a926",
+  "size": 72057208,
   "published_at": "2026-09-15",
   "notes": [
     "Тестовый выпуск для проверки механизма обновления.",
-    "Архив содержит исправленный OgibArm 1.0.1 build 4 с обработкой HTTP-перенаправлений GitHub."
+    "Архив содержит OgibArm 1.0.1 build 5: загрузка через перенаправления GitHub и очистка временных файлов без консольного окна."
   ]
 }
