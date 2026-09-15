@@ -1,19 +1,15 @@
 {
-  "version": "1.0.1",
-  "build": 3,
-  "url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.1.zip",
-  "download_url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.1.zip",
-  "release_url": "https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.1",
-  "file_name": "OgibArm_1.0.1.zip",
+  "version": "1.0.2",
+  "build": 4,
+  "url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.2.zip",
+  "download_url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.2.zip",
+  "release_url": "https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.2",
+  "file_name": "OgibArm_1.0.2.zip",
   "sha256": "b1bdd92a56491582732269ed1afd1d9f292b4463b1033bdf8529d5fec7541581",
   "size": 72056274,
-  "published_at": "2026-09-14",
+  "published_at": "2026-09-15",
   "notes": [
-    "Исправлено отображение русских имён встроенных тестовых DXF.",
-    "Для тестов R12 и R2007 автоматически выбираются соответствующие фоновые шкалы.",
-    "Прозрачный фон PNG выбран по умолчанию.",
-    "Обновлены и усилены проверки встроенных тестовых комплектов.",
-    "Добавлены автоматическая проверка обновлений, безопасная загрузка и установка с восстановлением предыдущей версии при ошибке.",
-    "Повторный запуск выводит работающую программу на передний план и не создаёт вторую копию."
+    "Тестовый выпуск для проверки механизма обновления.",
+    "Архив полностью совпадает с выпуском 1.0.1; изменены только номер версии и имя файла выпуска."
   ]
 }
