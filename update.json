@@ -1,8 +1,8 @@
 {
   "version": "1.0.2",
   "build": 4,
-  "url": "https://github.com/Water-FAQ/OgibArm/releases/download/v1.0.2/OgibArm_1.0.2.zip",
-  "download_url": "https://github.com/Water-FAQ/OgibArm/releases/download/v1.0.2/OgibArm_1.0.2.zip",
+  "url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.2.zip",
+  "download_url": "https://github.com/Water-FAQ/OgibArm/releases/latest/download/OgibArm_1.0.2.zip",
   "release_url": "https://github.com/Water-FAQ/OgibArm/releases/tag/v1.0.2",
   "file_name": "OgibArm_1.0.2.zip",
   "sha256": "b1bdd92a56491582732269ed1afd1d9f292b4463b1033bdf8529d5fec7541581",
