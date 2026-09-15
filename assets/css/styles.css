@@ -653,6 +653,8 @@ footer nav { display: flex; flex-wrap: wrap; gap: 14px; }
 .feedback { padding-top: 30px; }
 .page-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .content > .card { margin-bottom: 14px; }
+.content > section.card { padding: 28px; }
+.content > section.card h2 { margin-bottom: 18px; }
 
 @media (max-width: 820px) {
   .logo img { width: 150px; }
@@ -674,4 +676,6 @@ footer nav { display: flex; flex-wrap: wrap; gap: 14px; }
   .carousel-arrow.previous { left: 9px; }
   .carousel-arrow.next { right: 9px; }
   .page-actions { display: grid; }
+  .content > section.card { padding: 20px; }
+  .content > section.card h2 { margin-bottom: 16px; }
 }
